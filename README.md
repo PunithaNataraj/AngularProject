@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
+# Backend API - JSON server
+Run 'npm run json-run' to create an dummy data api based on db.json file. It is will create an API 'http://localhost:3000/products' which is used in the project to fetch the data.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
