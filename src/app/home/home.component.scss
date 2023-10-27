@@ -1,0 +1,15 @@
+@import "../../assets/scss/variables";
+
+.home_card {
+  background: #E2E7ED;
+  border: 1px solid #E5E5E5;
+  border-radius: 11px;
+  width: 94%;
+  margin: 40px;
+
+  &_welcome_msg {
+    color: $font-color-light;
+    margin: 15px;
+    line-height: 3;
+  }
+}

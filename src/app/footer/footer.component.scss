@@ -1,0 +1,24 @@
+.footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0px;
+  background: var(--footer-background-color);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &-info {
+    text-decoration: underline;
+    line-height: 2;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: 0 auto;
+    color: var(--footer-text-info-color);
+  }
+
+  &-copyrights {
+    font-size: 13px;
+    color: var(--footer-text-copyright-color);
+  }
+}

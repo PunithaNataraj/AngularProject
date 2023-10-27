@@ -1,0 +1,81 @@
+@import "../../assets/scss/mixins";
+
+.img_product {
+  width: 30%;
+  height: 50%;
+}
+.div-col-2 {
+  margin: 25px 30px 0px 35px;
+}
+.txtSearch {
+  @include boxborder;
+  width: 100%;
+  height: 29px;
+  padding-left: 5px;
+}
+.searchIcon {
+  float: right;
+  margin-right: 6px;
+  margin-top: -23px;
+  position: relative;
+  z-index: 0;
+  color: var(--magnifier-color);
+}
+.lblcategory {
+  padding-right: 20px;
+  color: var(--main-content-text-color);
+}
+.selectCategory {
+  @include font_category;
+  @include boxborder;
+  padding: 3px;
+}
+.div-item-price {
+  font-size: 18px;
+  margin: 10px auto;
+}
+figure.effect-hover img {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+figure.effect-hover:hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+figure.effect-hover figcaption {
+  padding: 1em;
+}
+
+figure.effect-hover figcaption::before {
+  position: absolute;
+}
+
+figure.effect-hover figcaption::before,
+figure.effect-hover p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-hover h2 {
+  padding: 20% 0 20px 0;
+}
+
+figure.effect-hover p {
+  margin: 5px auto;
+  max-width: 200px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+figure.effect-hover:hover figcaption::before,
+figure.effect-hover:hover p {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

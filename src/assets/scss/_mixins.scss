@@ -1,0 +1,152 @@
+@import "breakpoints";
+@import "theme";
+@import "variables";
+
+// media query mixin
+@mixin phone {
+  @media (max-width: #{$breakpoint-sm}) {
+    @content;
+
+    nav {
+      width: 100%;
+
+      ul {
+        display: none;
+      }
+
+      li {
+        float: left;
+        position: relative;
+
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+
+        ul li a {
+          padding-left: 30px;
+        }
+
+        .nav-burger {
+          display: block !important;
+        }
+      }
+    }
+
+    .footer {
+      font-size: 12px;
+
+      &-copyrights {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-md}) {
+    @content;
+
+    nav {
+      ul {
+        .nav_list {
+          display: block !important;
+        }
+
+        li {
+          .nav_link {
+            display: block;
+          }
+          .nav-burger {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .footer {
+      font-size: 12px;
+
+      &-copyrights {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+
+    nav {
+      ul {
+        .nav_list {
+          display: block !important;
+        }
+
+        li {
+          .nav_link {
+            display: block;
+          }
+
+          .nav-burger {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+
+    nav {
+      ul {
+        .nav_list {
+          display: block !important;
+        }
+
+        li {
+          .nav_link {
+            display: block;
+          }
+
+          .nav-burger {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+//setting grid class display
+[class^="d-grid-"] {
+  display: grid;
+}
+//looping the column based on screen
+@for $i from 1 through 12 {
+  .d-grid-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+
+    @include phone {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@mixin font {
+  font-size: 18px;
+  font-family: $font-reg;
+}
+
+@mixin font_category {
+  font-size: 14px;
+  font-family: $font-reg;
+}
+
+@mixin boxborder {
+  border: 1px solid gray;
+  border-radius: 5px;
+}

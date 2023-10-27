@@ -1,0 +1,58 @@
+@import "../../assets/scss/variables";
+
+.nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    background: var(--header-background-color) 0% 0% no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+    color: var(--header-menu-item-color);
+    padding: 0 16px;
+    align-items: center;
+    height: 56px;
+    z-index: 20000;
+
+    &_logo {
+        font-size: 26px;
+        font-family: $font-semibold;
+    }
+
+    &_list {
+        list-style: none;
+        display: flex;
+    }
+
+    &_link {
+        margin-right: 20px;
+
+        a {
+            color: var(--header-menu-item-default-color);
+        }
+    }
+
+    &-burger {
+        display: none;
+    }
+
+    a.active {
+        font-family: $font-semibold;
+        color: var(--header-menu-item-color);
+    }
+}
+
+
+.badge {
+    position: absolute;
+    font-size: 13px;
+    color: var(--header-theme-switch-before-background-color);
+    background: #F16562;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin-top: -10px;
+    margin-left: -8px;
+    cursor: pointer;
+}

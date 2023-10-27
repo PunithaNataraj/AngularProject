@@ -1,0 +1,19 @@
+<div class="container">
+  <div *ngIf="cartService.cartItems().length > 0 else noItem" class="Cartcontainer">
+    <div>
+      <h4>Selected Item List</h4>
+    </div>
+    <div class="card">
+      <ng-container *ngFor="let cartitem of cartService.cartItems(); let i =index">
+        <div class="d-grid-3">
+          <img [src]="cartitem.image" class="img_cart" />
+          <span>{{cartitem.title}}</span>
+          <span>{{cartitem.price}}</span>
+        </div>       
+      </ng-container>
+    </div>
+  </div>
+  <ng-template #noItem>
+    <h3 class="noitem">Cart is Empty</h3>
+  </ng-template>
+</div>

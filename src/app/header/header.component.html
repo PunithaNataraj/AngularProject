@@ -1,0 +1,45 @@
+<header class="nav">
+  <!--Logo-->
+  <div class="nav_logo">
+    <a href="/">ShopEase</a>
+  </div>
+  <!--Menu-->
+  <div>
+    <nav>
+
+      <ul class="nav_list" [class.is-open]="isMenuOpen">
+        <li>
+          <div class="theme-switcher">
+            <label class="switch">
+              <input type="checkbox"
+                     [checked]="isLightTheme"
+                     (change)="onThemeSwitchChange()" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </li>
+        <li class="nav_link">
+          <i class="fa fa-shopping-cart" aria-hidden="true" routerLink="/cart">
+            <span class="badge">{{cartService.totalItems()}}</span>
+          </i>
+        </li>
+        <li class="nav_link">
+          <a routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav_link">
+          <a routerLink="/products" routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav_link">
+          <a routerLink="/about" routerLinkActive="active">About Us</a>
+        </li>
+        <li class="nav_link">
+          <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+        <li class="nav-burger" (click)="toggleMenu()">
+          <a id="nav-toggle" href="#!"><span><i class="fa fa-bars"></i></span></a>
+        </li>
+      </ul>
+     
+    </nav>
+  </div>
+</header>
