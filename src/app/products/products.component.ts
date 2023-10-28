@@ -19,7 +19,7 @@ export class ProductsComponent implements OnInit {
   NewProductList: any;
   searchText: any;
   constructor(public dataService: DataAccessService, public cartService: CartItemsService, private http: HttpClient) {
-    this.productsData = toSignal<IProduct[]>(this.http.get<IProduct[]>("http://localhost:3000/products"));
+    this.productsData = toSignal<IProduct[]>(this.http.get<IProduct[]>("https://punithas-projects.vercel.app/products"));
   }
   ngOnInit(): void {
     this.categorytemp = computed(() => this.productsData().map((x: any) => x.category));
