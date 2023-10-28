@@ -1,0 +1,34 @@
+
+[data-theme="light"] {
+  --header-background-color: #F6F6F6;
+  --header-menu-item-color: #003f72;
+  --header-menu-item-default-color: #000;
+  --header-theme-switch-background-color: #232323;
+  --header-theme-switch-before-background-color: #ffffff;
+  --header-theme-switch-checked-background-color: #003f72;
+  --main-content-background-color: #ffffff;
+  --main-content-text-color: #003f72;
+  --footer-background-color: #e9e3e357;
+  --footer-text-info-color: #003f72;
+  --footer-text-copyright-color: #000;
+  --button-text-color: #FFFFFF;
+  --button-border-color: #003f72;
+  --magnifier-color: #003f72;
+}
+
+[data-theme="dark"] {
+  --header-background-color: #000;
+  --header-menu-item-color: #FFF;
+  --header-menu-item-default-color: #FFF;
+  --header-theme-switch-background-color: #cccccc;
+  --header-theme-switch-before-background-color: #ffffff;
+  --header-theme-switch-checked-background-color: #003f72;
+  --main-content-background-color: #1a1e25;
+  --main-content-text-color: #FFF;
+  --footer-background-color: #000;
+  --footer-text-info-color: #FFF;
+  --footer-text-copyright-color: #FFF;
+  --button-text-color: #FFFFFF;
+  --button-border-color: #003f72;
+  --magnifier-color: #000;
+}
