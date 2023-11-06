@@ -34,6 +34,8 @@
   font-size: 18px;
   margin: 10px auto;
 }
+
+/*Onhover image effect Starts*/
 figure.effect-hover img {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -79,3 +81,4 @@ figure.effect-hover:hover p {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+/*Onhover image effect ends*/
